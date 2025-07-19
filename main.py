@@ -127,14 +127,71 @@ async def micro(ctx):
 async def phys1(ctx):
     await ctx.send("AP Phys1:\n"
                    "- [AP Phys1 Study Guide](https://drive.google.com/file/d/1nwhXBwahbEjHk6KUccKB-HVfa8Zpsb6w/view?usp=sharing)\n"
-                   "- [AP Phys1 FRQ'S](https://apcentral.collegeboard.org/courses/ap-physics-1/exam/past-exam-questions)")
+                   "- [AP Phys1 FRQ'S](https://apcentral.collegeboard.org/courses/ap-physics-1/exam/past-exam-questions)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)")
+
+@bot.command()
+async def phys2(ctx):
+    await ctx.send("AP Phys2:\n"
+                   "- [AP Phys2 Study Guide](https://drive.google.com/file/d/1DJZx5ISUOV_GPj7d9jMuLkDlD4Tp4Vyy/view?usp=sharing)\n"
+                   "- [AP Phys2 FRQ'S](https://apcentral.collegeboard.org/courses/ap-physics-2/exam/past-exam-questions)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)")
+
+@bot.command()
+async def physc(ctx):
+    await ctx.send("AP PhysC:\n"
+                   "- [AP PhysC Mechanics Lectures](https://www.apphysicslectures.com/ap-physics-mechanics)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)\n"
+                   "- [AP PhysC Mechanics FRQ'S](https://apcentral.collegeboard.org/courses/ap-physics-c-mechanics/exam/past-exam-questions)\n"
+                   "- [Ap PhysC & E&M Videos](https://www.youtube.com/@AllenTsaoSTEMCoach/videos)\n"
+                   "- [AP PhysC E&M Videos](https://www.youtube.com/@onlearningcurve/videos)\n"
+                   "- [AP PhysC E&M FRQ'S](https://apcentral.collegeboard.org/courses/ap-physics-c-electricity-and-magnetism/exam/past-exam-questions)\n"
+                   "- [AP PhysC E&M Lectures](https://www.apphysicslectures.com/ap-physics-em)")
+
+@bot.command()
+async def psych(ctx):
+    await ctx.send("AP Psych:\n"
+                   "- [AP Psych Study Guide](https://drive.google.com/file/d/1Y-fbM-Mm0CzuvI8VIctRd-E4xfUO1Xk9/view?usp=sharing)\n"
+                   "- [AP Psych MrSinn](https://www.youtube.com/c/MrSinn)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)\n"
+                   "- [AP Psych FRQ'S](https://apcentral.collegeboard.org/courses/ap-psychology/exam/past-exam-questions)")
+
+@bot.command()
+async def stats(ctx):
+    await ctx.send("AP Stats:\n"
+                   "- [AP Stats Study Guide](https://drive.google.com/file/d/1ofNZ1lLI279Bf0Tf-SJ_zmHYb7UTJd8i/view?usp=sharing)\n"
+                   "- [AP Stats FRQ'S](https://apcentral.collegeboard.org/courses/ap-statistics/exam/past-exam-questions)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)")
+
+@bot.command()
+async def gov(ctx):
+    await ctx.send("AP Gov:\n"
+                   "- [AP Gov Study Guide](https://docs.google.com/document/d/18jeARsST6IXmVjASNAaZXLi6YKAh6xBxqYL7fx4X488/edit?usp=sharing)\n"
+                   "- [AP Gov FRQ'S](https://apcentral.collegeboard.org/courses/ap-united-states-government-and-politics/exam/past-exam-questions)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)")
+
+@bot.command()
+async def apush(ctx):
+    await ctx.send("APUSH:\n"
+                   "- [APUSH Study Guide](https://docs.google.com/document/d/1jCHQsaYkP5zwrl8yLnsdZv-5ihlGwEKTl-Hh05Pexx4/edit?tab=t.0#heading=h.nxwivvotvuh2)\n"
+                   "- [APUSH DBQ Guide](https://docs.google.com/document/d/1g_eWMx3JgkX2omglypbmbnl5RkK7ANhtK_jOLKLiS5Y/edit?tab=t.0)\n"
+                   "- [AP Books Recommended By Yours Truly](https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d)\n"
+                   "- [APUSH FRQ'S](https://apcentral.collegeboard.org/courses/ap-united-states-history/exam/past-exam-questions)\n"
+                   "- [APUSH MCQ](https://apcentral.collegeboard.org/media/pdf/ap-united-states-history-ced-practice-exam.pdf)\n"
+                   "- [ChatGPT](https://chatgpt.com)\n"
+                   "- [APUSH Study Guide #2](https://docs.google.com/document/d/1LFoA6letcr0AfOQoUEoEt7ZEQwsWqfrOPRS3EZS_y78/edit?usp=sharing)")
+
+@bot.command()
+async def whap(ctx):
+    await ctx.send("WHAP:\n"
+                   "- [WHAP Full Study Guide](https://docs.google.com/document/d/1Xrs0tLkEGB7LAhqUOXaYeRC7kfgcFQSXo4Mo5Gfvmn8/edit?usp=sharing)")
 
 @bot.command()
 async def followers(ctx):
     try:
         loader = instaloader.Instaloader()
         profile = instaloader.Profile.from_username(loader.context, "seoul.pearson")
-        await ctx.send(f"seoul.pearson has {profile.followers:,} followers.")
+        await ctx.send(f"seoul.pearson has {profile.followers:,} followers, at 50k followers the clash royale duel with isaaq.ik will commence.")
     except Exception as e:
         await ctx.send(f"Couldn't fetch follower count. Error: {e}")
 
