@@ -193,6 +193,11 @@ async def whap(ctx):
                    "- [WHAP Full Study Guide](<https://docs.google.com/document/d/1Xrs0tLkEGB7LAhqUOXaYeRC7kfgcFQSXo4Mo5Gfvmn8/edit?usp=sharing>)")
 
 @bot.command()
+async def say(ctx, *, message):
+    """Repeats whatever you say"""
+    await ctx.send(message)
+
+@bot.command()
 async def help(ctx):
     """Displays a categorized list of available commands"""
     embed = discord.Embed(
