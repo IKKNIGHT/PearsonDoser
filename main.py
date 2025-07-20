@@ -7,7 +7,7 @@ load_dotenv()
 
 intents = discord.Intents.default()
 intents.message_content = True  # ✅ THIS IS REQUIRED
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 @bot.command()
 async def resources(ctx):
@@ -189,5 +189,42 @@ async def apush(ctx):
 async def whap(ctx):
     await ctx.send("WHAP:\n"
                    "- [WHAP Full Study Guide](<https://docs.google.com/document/d/1Xrs0tLkEGB7LAhqUOXaYeRC7kfgcFQSXo4Mo5Gfvmn8/edit?usp=sharing>)")
+
+@bot.command()
+async def help(ctx):
+    """Displays a categorized list of available commands"""
+    embed = discord.Embed(
+        title="📚 AP Study Bot Help",
+        description="Use `!command` for resources. Example: `!bio` for Biology\n\n"
+                    "**Need a specific subject?** Use these categories:",
+        color=discord.Color.blue()
+    )
+
+    # Categories with emojis
+    categories = {
+        "🔬 Sciences": ["bio", "chem", "phys1", "phys2", "physc", "envsci"],
+        "📐 Math/CS": ["calc", "stats", "csa"],
+        "🌍 Social Studies": ["apush", "gov", "hgap", "euro", "whap", "compgov"],
+        "💵 Economics": ["macro", "micro"],
+        "📝 English": ["lang", "lit"],
+        "🧠 Psychology": ["psych"],
+        "📂 General": ["resources", "history", "ultimate", "books", "notes"]
+    }
+
+    # Build the embed fields
+    for category, commands in categories.items():
+        cmd_list = ", ".join(f"`!{cmd}`" for cmd in commands)
+        embed.add_field(name=category, value=cmd_list, inline=True)
+
+    embed.add_field(
+        name="🔍 Need more details?",
+        value="Type any command to see its specific resources\n"
+             "Example: `!bio` for AP Biology resources",
+        inline=False
+    )
+
+    embed.set_footer(text="Bot created to help AP students | Use !help for this menu")
+
+    await ctx.send(embed=embed)
 
 bot.run(os.getenv("DISCORD_TOKEN"))
