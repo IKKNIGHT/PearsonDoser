@@ -242,10 +242,6 @@ def run_webserver():
 # Start webserver in background
 Thread(target=run_webserver).start()
 
-# Your existing bot code below
-import discord
-bot = discord.Bot()
-
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
