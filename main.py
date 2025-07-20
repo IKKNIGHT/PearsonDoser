@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import instaloader
 import os
 from dotenv import load_dotenv
 
@@ -190,14 +189,5 @@ async def apush(ctx):
 async def whap(ctx):
     await ctx.send("WHAP:\n"
                    "- [WHAP Full Study Guide](<https://docs.google.com/document/d/1Xrs0tLkEGB7LAhqUOXaYeRC7kfgcFQSXo4Mo5Gfvmn8/edit?usp=sharing>)")
-
-@bot.command()
-async def followers(ctx):
-    try:
-        loader = instaloader.Instaloader()
-        profile = instaloader.Profile.from_username(loader.context, "seoul.pearson")
-        await ctx.send(f"seoul.pearson has {profile.followers:,} followers.")
-    except Exception as e:
-        await ctx.send(f"Couldn't fetch follower count. Error: {e}")
 
 bot.run(os.getenv("DISCORD_TOKEN"))
