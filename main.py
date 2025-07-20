@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 import instaloader
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix='!', intents=intents)
@@ -195,4 +199,4 @@ async def followers(ctx):
     except Exception as e:
         await ctx.send(f"Couldn't fetch follower count. Error: {e}")
 
-bot.run("YOUR_BOT_TOKEN_HERE")
+bot.run(os.getenv("DISCORD_TOKEN"))
