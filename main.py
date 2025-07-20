@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+from flask import Flask
+from threading import Thread
 
 load_dotenv()
 
@@ -226,5 +228,26 @@ async def help(ctx):
     embed.set_footer(text="Bot created to help AP students | Use !help for this menu")
 
     await ctx.send(embed=embed)
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run_webserver():
+    app.run(host='0.0.0.0', port=8080)
+
+# Start webserver in background
+Thread(target=run_webserver).start()
+
+# Your existing bot code below
+import discord
+bot = discord.Bot()
+
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user}")
 
 bot.run(os.getenv("DISCORD_TOKEN"))
