@@ -232,15 +232,17 @@ async def help(ctx):
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Bot is running!"
+@app.route('/health')
+def health_check():
+    return {"status": "healthy"}, 200
 
-def run_webserver():
-    app.run(host='0.0.0.0', port=8080)
+def run_flask():
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 8080)))
 
-# Start webserver in background
-Thread(target=run_webserver).start()
+# Start Flask in background
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.daemon = True
+flask_thread.start()
 
 @bot.event
 async def on_ready():
