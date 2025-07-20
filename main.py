@@ -11,7 +11,7 @@ async def resources(ctx):
 
 @bot.command()
 async def history(ctx):
-    await ctx.send("Ultimate AP history doc : [(]Ultimate AP History Doc](https://drive.google.com/file/d/1SJmA5dc_2lzkNhiBR_pevBQPOn2r9Myw/view?usp=sharing)")
+    await ctx.send("Ultimate AP history doc : [Ultimate AP History Doc](https://drive.google.com/file/d/1SJmA5dc_2lzkNhiBR_pevBQPOn2r9Myw/view?usp=sharing)")
 
 @bot.command()
 async def ultimate(ctx):
@@ -191,7 +191,7 @@ async def followers(ctx):
     try:
         loader = instaloader.Instaloader()
         profile = instaloader.Profile.from_username(loader.context, "seoul.pearson")
-        await ctx.send(f"seoul.pearson has {profile.followers:,} followers, at 50k followers the clash royale duel with isaaq.ik will commence.")
+        await ctx.send(f"seoul.pearson has {profile.followers:,} followers.")
     except Exception as e:
         await ctx.send(f"Couldn't fetch follower count. Error: {e}")
 
