@@ -222,6 +222,7 @@ async def help(ctx):
         "💵 Economics": ["macro", "micro"],
         "📝 English": ["lang", "lit"],
         "🧠 Psychology": ["psych"],
+        "🔣 Language": ["spanish"],
         "📂 General": ["resources", "history", "ultimate", "books", "notes"]
     }
 
