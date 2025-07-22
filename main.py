@@ -193,6 +193,13 @@ async def whap(ctx):
                    "- [WHAP Full Study Guide](<https://docs.google.com/document/d/1Xrs0tLkEGB7LAhqUOXaYeRC7kfgcFQSXo4Mo5Gfvmn8/edit?usp=sharing>)")
 
 @bot.command()
+async def spanish(ctx):
+    await ctx.send("AP Spanish:\n"
+                   " - [AP Spanish Study Guide](<https://library.fiveable.me/ap-spanish-lang>)\n"
+                   " - [AP Spanish Knowt](<https://knowt.com/exams/AP/AP-Spanish-Language-and-Culture>)\n"
+                   " - [AP Spanish FRQ'S](<https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam/past-exam-questions>)")
+
+@bot.command()
 async def say(ctx, *, message):
     """Repeats whatever you say"""
     await ctx.send(message)
