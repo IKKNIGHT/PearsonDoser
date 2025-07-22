@@ -195,9 +195,9 @@ async def whap(ctx):
 @bot.command()
 async def spanish(ctx):
     await ctx.send("AP Spanish:\n"
-                   " - [AP Spanish Study Guide](<https://library.fiveable.me/ap-spanish-lang>)\n"
-                   " - [AP Spanish Knowt](<https://knowt.com/exams/AP/AP-Spanish-Language-and-Culture>)\n"
-                   " - [AP Spanish FRQ'S](<https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam/past-exam-questions>)")
+                   "- [AP Spanish Study Guide](<https://library.fiveable.me/ap-spanish-lang>)\n"
+                   "- [AP Spanish Knowt](<https://knowt.com/exams/AP/AP-Spanish-Language-and-Culture>)\n"
+                   "- [AP Spanish FRQ'S](<https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam/past-exam-questions>)")
 
 @bot.command()
 async def say(ctx, *, message):
