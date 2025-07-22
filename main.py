@@ -92,7 +92,7 @@ async def lit(ctx):
                    "- [AP Books Recommended By Yours Truly](<https://www.amazon.com/shop/seoul.pearson/list/1NZ0VQJAPPFHK?linkCode=spc&tag=onamzpeterhon-20&ref_=aip_sf_list_spv_ofs_mixed_d>)")
 
 @bot.command()
-async def envsci(ctx):
+async def apes(ctx):
     await ctx.send("AP Env Sci:\n"
                    "- [AP Env Sci Study Guide](<https://drive.google.com/file/d/14SSP1sFmKM_uOLXe6qX_eMqxm8-NKLAc/view>)\n"
                    "- [AP Env Sci FRQ'S](<https://apcentral.collegeboard.org/courses/ap-environmental-science/exam/past-exam-questions>)\n"
@@ -209,7 +209,7 @@ async def help(ctx):
 
     # Categories with emojis
     categories = {
-        "🔬 Sciences": ["bio", "chem", "phys1", "phys2", "physc", "envsci"],
+        "🔬 Sciences": ["bio", "chem", "phys1", "phys2", "physc", "apes"],
         "📐 Math/CS": ["calc", "stats", "csa"],
         "🌍 Social Studies": ["apush", "gov", "hgap", "euro", "whap", "compgov"],
         "💵 Economics": ["macro", "micro"],
